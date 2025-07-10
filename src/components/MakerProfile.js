@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import './styles/MakerProfile.css';
 
-const BASE_URL ='http://localhost:5000';
+const BASE_URL ='https://smartgov-backend.onrender.com';
 
 const MakerProfile = () => {
   const { email } = useParams();
