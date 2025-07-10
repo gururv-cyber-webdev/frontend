@@ -1,0 +1,75 @@
+.checker-profile-container {
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.profile-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+}
+
+.profile-left {
+    width: 60%;
+    overflow-y: auto;
+    max-height: 90vh;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-left img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-left p {
+    margin: 10px 0;
+}
+
+.profile-right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.profile-right button {
+    padding: 12px;
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.profile-right button:hover {
+    background-color: #0198a4;
+}
+
+.view-link {
+    color: #ffd700;
+    font-weight: bold;
+    margin-left: 10px;
+}

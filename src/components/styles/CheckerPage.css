@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+.checker-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.checker-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 10px;
+    margin-top: 60px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.checker-content button {
+    padding: 12px;
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.checker-container button:hover {
+    background-color: #c2c2cc;
+}
+
+
+.scheme-list {
+    list-style: none;
+    padding: 0;
+}
+
+.scheme-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+.btn-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-group button {
+    flex: 1;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background 0.3s;
+}
+
+.btn-group button:hover {
+    background-color: #0056b3;
+}
