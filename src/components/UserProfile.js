@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import './styles/UserProfile.css';          // make sure this path & name exist
 
 // ⚡️  CHANGE THIS for production or read from .env
-const BASE_URL ='http://localhost:5000';
+const BASE_URL ='https://smartgov-backend.onrender.com';
 
 const UserProfile = () => {
   const navigate = useNavigate();
