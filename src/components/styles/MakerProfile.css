@@ -1,85 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .maker-container {
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto;
 }
 
 .background-video {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
-.maker-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    gap: 400px;
-    color: rgb(11, 10, 10);
-    
-    height: 100vh;
-    box-sizing: border-box;
+.maker-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 60px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
 }
 
 .maker-left {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    backdrop-filter: blur(6px);
-    overflow-y: auto;
-    max-height: 90vh;
+  flex: 1;
+  max-width: 350px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 12px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.maker-left p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.maker-avatar {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  object-fit: cover;
 }
 
 .maker-right {
-    width: 48%;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 30px;
-    border-radius: 10px;
-    backdrop-filter: blur(6px);
-    display: flex;
+  flex: 1;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  color: #222;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.edit-form input,
+.edit-form select,
+.edit-form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.edit-form input,
+.edit-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.edit-form label {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button-row button {
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-row button:hover {
+  background-color: #0056b3;
+}
+
+.view-link {
+  color: #00f5ff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.loading {
+  color: white;
+  font-size: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .maker-card {
     flex-direction: column;
-    justify-content: flex-start;
-    overflow-y: auto;
-    max-height: 90vh;
-}
+    padding: 30px 20px;
+  }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid white;
-}
-
-.maker-right input,
-.maker-right select {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-    font-size: 14px;
-}
-
-.maker-right button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    transition: background 0.3s;
-}
-
-.maker-right button:hover {
-    background-color: #ddd;
+  .maker-left,
+  .maker-right {
+    max-width: 100%;
+  }
 }
